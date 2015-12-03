@@ -5,11 +5,11 @@
 <title>CSS Pie Charts in a flaky JavaScript crust</title>
 
 <style type="text/css" media="all">
-	@import url(pieChart.css);	
+	@import url(cssPieChart.css);	
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script src="pieChart.js"></script>
+<script src="cssPieChart.js"></script>
 
 </head>
 
@@ -126,7 +126,10 @@
     </table>
 
 <script>
-	$('.pieChart').each( function(){$(this).pieChart()} );
+	$('.pieChart').each( function(){
+        'use strict';
+        $(this).pieChart();
+    });
 </script>
 </body>
 </html>
