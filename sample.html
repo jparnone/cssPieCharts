@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CSS Pie Charts in a flaky JavaScript crust</title>
+
+<style type="text/css" media="all">
+	@import url(pieChart.css);	
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="pieChart.js"></script>
+
+</head>
+
+<body>
+
+	<table class="pieChart">
+    	<tr>
+        	<th>IE</th>
+            <td>55.5%</td>
+        </tr>
+        <tr>
+        	<th>Firefox</th>
+            <td>34.5%</td>
+        </tr>
+        <tr>
+        	<th>Chrome</th>
+            <td>10%</td>
+        </tr>        
+    </table>
+    
+    <table class="pieChart">
+    	<tr>
+        	<th>IE6</th>
+            <td>14%</td>
+        </tr>
+        <tr>
+        	<th>IE7</th>
+            <td>55%</td>
+        </tr> 
+        <tr>
+        	<th>IE8</th>
+            <td>31%</td>
+        </tr>        
+    </table>
+    
+    <table class="pieChart">
+    	<tr>
+        	<th>big</th>
+            <td>86%</td>
+        </tr>
+        <tr>
+        	<th>small</th>
+            <td>14%</td>
+        </tr>   
+    </table>
+    
+    <table class="pieChart">
+        <tr>
+        	<th>small2</th>
+            <td>10%</td>
+        </tr>   
+    	<tr>
+        	<th>big2</th>
+            <td>90%</td>
+        </tr>
+    </table>
+    
+    
+    <table class="pieChart">
+    	<tr>
+        	<th>Chrome5</th>
+            <td>23%</td>
+        </tr>
+        <tr>
+        	<th>Chrome6</th>
+            <td>12%</td>
+        </tr>
+        <tr>
+        	<th>Chrome7</th>
+            <td>28%</td>
+        </tr>
+        <tr>
+        	<th>Chrome8</th>
+            <td>32%</td>
+        </tr>
+        <tr>
+        	<th>Chrome9</th>
+            <td>5%</td>
+        </tr>        
+    </table>
+    <table class="pieChart">
+    	<tr>
+        	<th>Netscape1</th>
+            <td>34%</td>
+        </tr>
+        <tr>
+        	<th>Netscape2</th>
+            <td>1%</td>
+        </tr>
+        <tr>
+        	<th>Netscape3</th>
+            <td>2%</td>
+        </tr>
+        <tr>
+        	<th>Netscape4</th>
+            <td>3%</td>
+        </tr>
+        <tr>
+        	<th>Netscape5</th>
+            <td>28%</td>
+        </tr>
+        <tr>
+        	<th>Netscape6</th>
+            <td>17%</td>
+        </tr>
+        <tr>
+        	<th>Netscape7</th>
+            <td>12%</td>
+        </tr>
+        <tr>
+        	<th>Netscape8</th>
+            <td>3%</td>
+        </tr>     
+    </table>
+
+<script>
+	$('.pieChart').each( function(){$(this).pieChart()} );
+</script>
+</body>
+</html>

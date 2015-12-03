@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.pieChart{
+	border-collapse:collapse;
+	display:block;
+	float:left;
+	margin:20px;
+	
+	-moz-box-shadow:0 0 8px #000;
+	-webkit-box-shadow:0 0 8px #000;
+	
+	position:relative !important;	
+}
+
+.pieChart:after{
+	background:
+		-moz-linear-gradient(top left, rgba(255,255,255,1),  rgba(255,255,255,0), rgba(255,255,255,0)),
+		-moz-radial-gradient(center center, rgba(0,0,0,0), rgba(0,0,0,.5))
+	;		
+	background:
+		-webkit-linear-gradient(top left, rgba(255,255,255,1),  rgba(255,255,255,0), rgba(255,255,255,0)),
+		-webkit-radial-gradient(center center, rgba(0,0,0,0), rgba(0,0,0,.5))
+	;	
+	content: ' ';
+	
+	left:0;
+	top:0;
+}
+		
+.pieChart th{
+	display:none;
+}
+
+.pieChart,
+.pieChart:after,
+.pieChart td,
+.pieChart td:before,
+.pieChart .over25:after,
+.pieChart .over50:after,
+.pieChart .over75:after{		
+	-moz-border-radius:300px;
+	-webkit-border-radius:300px;
+	
+	height:300px;
+	overflow:hidden;
+	position:absolute;
+	width:300px;
+}
+
+.pieChart td{
+	left:0;
+	top:0;
+	
+	-webkit-mask-image: -webkit-radial-gradient(#000, #000); /* Chrome does not render hidden overflow when border-radius is applied, so we use this instead */
+	
+	-moz-transform-origin:center center;
+	-webkit-transform-origin:center center;		
+}
+
+.pieChart td:before,
+.pieChart .over25:after,
+.pieChart .over50:after,
+.pieChart .over75:after{
+	clip:rect(0px, 150px, 150px, 0px);	
+	content:' ';
+	left:1px;
+	top:1px;
+}
+
+.pieChart .over50:before,
+.pieChart .over75:before,
+.pieChart .over75:after{
+	clip:rect(0px, 300px, 150px, 0px);	
+}
